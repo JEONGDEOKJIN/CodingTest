@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+
+    //     다음 배열에서 400, 500를 삭제하는 code를 입력하세요.    
+    //     var nums = [100, 200, 300, 400, 500]; 
+
+
+    // 이 값이 여기에 있니? 
+    // 있으면, 몇 번째 인덱스니? -> for 문에서 인덱스를 넣어서? 
+    // 그 인덱스에 있는 값을 지워줘 -> (splice)
+
+    // 🔷 1차 작성
+    // function remove(nums, deleteNums) {
+    //     let indexOfItem = 0
+    //     nums.forEach(function (item, index) {
+    //         if (item == deleteNums[0] || item == deleteNums[1]) indexOfItem = nums.indexOf(item)
+    //         nums.splice(indexOfItem, 1)
+    //         return nums
+    //     });
+    // }
+
+    // let nums = [100, 200, 300, 400, 500]
+    // let deleteNums = [300, 500]
+
+    // remove(nums, deleteNums)
+
+    // console.log(nums[0], nums[1])
+
+    
+    // 🔷 2차 작성 
+    
+    function remove(nums, deleteWish) {
+
+        let indexOfNum = 0;
+
+        for (i = 0; i < deleteWish.length; i++) {
+            if (nums.indexOf(deleteWish[i]) !== -1) 
+                indexOfNum = nums.indexOf(deleteWish[i]);
+        }
+        nums.splice(indexOfNum,1)
+        return nums
+    }
+
+    let nums = [100, 200, 300, 400, 500]
+    let deleteNums = [300, 500]
+
+    remove(nums, deleteNums)
+
+    console.log(nums[0], nums[1])
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>
